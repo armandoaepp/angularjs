@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="description" content="Basic example of binding data to an input in jQuery" />
+<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+</head>
+<body>
+  <br/><br/>
+  <div>
+  Enter your name:
+  <input name="your-name" id="your-name" type="text"></input>
+  </div>
+  <div id="output">Hello</div>
+
+  <script>
+
+			$('#your-name').bind('input', function() {
+				var name = $(this).val();
+				// now you can use "name" here
+				$('#output').html("Hello " + name);
+			});
+	</script>
+</body>
+</html>
