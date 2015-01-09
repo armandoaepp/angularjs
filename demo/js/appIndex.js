@@ -12,7 +12,12 @@ app.config(['$routeProvider', function($ruta) {
 		controller: 'CtrlPersonaNuevo'
 	});
 
-	/*$ruta.otherwise({
+	$ruta.when('/persona/editar/:idpersona', {
+		templateUrl: 'partials/persona/editar_persona.html',
+		controller: 'CtrlPersonaUpdate'
+	});
+
+	$ruta.otherwise({
 		redirectTo: '/'
-	});*/
+	});
 }]);

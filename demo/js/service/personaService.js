@@ -10,8 +10,12 @@ app.service('personaService', function($http){
         return $http.post('data/ajax/persona/setPersona.php', persona);
 	};
 
-	this.getPersonaByIdPersona= function(){
-        return $http.get('data/ajax/vehiculo/getVehiculo.php');
+	this.getPersonaByIdPersona= function(idpersona){
+
+		var url_    = 'data/ajax/persona/getPersonaByIdPersona.php';
+        var params_ = {'idpersona': idpersona} ;
+        return $http.get(url_, {'params': params_});
+
 	};
 	/*
 	this.getVehiculoByIdVehiculo = function(idvehiculo){

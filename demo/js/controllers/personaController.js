@@ -49,29 +49,25 @@ app.controller('CtrlPersonaNuevo',function($rootScope, $scope, personaService, $
 
 app.controller('CtrlPersonaUpdate',function($rootScope, $scope, personaService, $routeParams, $location){
     $rootScope.showTemplate = true;
-    $scope.vehiculo = [];
+    $scope.persona = [];
 
-    getVehiculoByIdVehiculo();
+    getPersonaByIdPersona();
 
+    function getPersonaByIdPersona(){
+        var idpersona = $routeParams.idpersona ;
+        console.log() ;
 
-    function getVehiculoByIdVehiculo(){
-        var idvehiculo = $routeParams.idpersona ;
-
-        personaService.getVehiculoByIdVehiculo(idvehiculo).then(
+        personaService.getPersonaByIdPersona(idpersona).then(
             function(response){
                 console.log(response.data);
                 if ( !response.data.error ) {
 
-                    var vehiculo = response.data.data[0];
+                    var persona = response.data.data[0];
 
-                    $scope.idvehiculo               = vehiculo.idvehiculo;
-                    $scope.placa                    = vehiculo.placa;
-                    $scope.color                    = vehiculo.color;
-                    $scope.modelo                   = vehiculo.modelo;
-                    $scope.observacion              = vehiculo.observacion;
-                    $scope.marca                    = vehiculo.marca;
-                    $scope.consumo                  = vehiculo.consumo;
-                    $scope.selected.idtipovehiculo  = vehiculo.idtipovehiculo;
+                    $scope.idpersona  = persona.idpersona;
+                    $scope.nombre     = persona.nombre;
+                    $scope.nacimiento = persona.nacimiento;
+                    $scope.tipo       = persona.tipo;
                 }
             }
         );
