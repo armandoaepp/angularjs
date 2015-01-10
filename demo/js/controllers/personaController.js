@@ -55,7 +55,6 @@ app.controller('CtrlPersonaUpdate',function($rootScope, $scope, personaService, 
 
     function getPersonaByIdPersona(){
         var idpersona = $routeParams.idpersona ;
-        console.log() ;
 
         personaService.getPersonaByIdPersona(idpersona).then(
             function(response){
@@ -68,6 +67,28 @@ app.controller('CtrlPersonaUpdate',function($rootScope, $scope, personaService, 
                     $scope.nombre     = persona.nombre;
                     $scope.nacimiento = persona.nacimiento;
                     $scope.tipo       = persona.tipo;
+                }
+            }
+        );
+    };
+
+    $scope.updPersona = function ()
+    {
+        var data = {
+            'idpersona' :   $scope.idpersona,
+            'nombre'    :   $scope.nombre,
+            'nacimiento':   $scope.nacimiento,
+            'tipo'      :   $scope.tipo,
+        };
+
+        personaService.updPersona(data).then(
+            function(response){
+                console.log(response) ;
+                if ( response.data.error ) {
+                    $scope.msj = response.data.msg;
+                }
+                else{
+                    $location.path('/persona');
                 }
             }
         );

@@ -1,5 +1,5 @@
 <div id="div_persona">
-	<form id="frm_persona" name="frm_persona" class="hform" method="post" ng-submit="updatePersona()" >
+	<form id="frm_persona" name="frm_persona" class="hform" method="post" ng-submit="updPersona()" >
 		<fieldset> <legend> Editar Persona</legend>
 		<fieldset>
 				<input ng-model="idpersona" type="hidden">
@@ -16,7 +16,7 @@
 			</fieldset>
 			<fieldset class="text-right">
 				<button type="button"  onclick="location.href='#/persona';"> Cancelar </button>
-				<button  type="submit" id="btnCancelar"   ng-disabled="frm_persona.$invalid" > Registrar </button>
+				<button  type="submit" id="btnRegistrar"   ng-disabled="frm_persona.$invalid" > Registrar </button>
 			</fieldset>
 		</fieldset>
 	</form>

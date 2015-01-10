@@ -24,7 +24,7 @@ class ClsPersona extends ClsConexion {
 	# Metodo Insertar
 	public function upd_persona($bean_persona)
 	{
-		$idpersona     = $bean_persona->getIdPersona();
+		$idpersona  = $bean_persona->getIdPersona();
 		$nombre     = $bean_persona->getNombre();
 		$nacimiento = !empty($bean_persona->getNacimiento())	? $bean_persona->getNacimiento() : '0000-00-00';
 		$tipo       = !empty($bean_persona->getTipo())			? $bean_persona->getTipo() : 1;

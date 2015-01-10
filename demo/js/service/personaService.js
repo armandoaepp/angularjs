@@ -15,13 +15,10 @@ app.service('personaService', function($http){
 		var url_    = 'data/ajax/persona/getPersonaByIdPersona.php';
         var params_ = {'idpersona': idpersona} ;
         return $http.get(url_, {'params': params_});
-
 	};
-	upd_persona($bean_persona)
 
-
-	this.updVehiculo = function(persona){
-        return $http.put('data/ajax/persona/updPesona.php', persona) ;
+	this.updPersona = function(persona){
+        return $http.put('data/ajax/persona/updatePersona.php', persona) ;
 	}
 
 

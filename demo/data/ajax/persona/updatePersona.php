@@ -22,14 +22,16 @@
 
 		$data = $objPersona->upd_persona($bean_persona);
 
-		if (count($data) > 0)
+		$res = array('msg' => 'Registrado correctamente', 'error' => false, 'data' => $data);
+
+		/*if (count($data) > 0)
 		{
 			$res = array('msg' => 'Registrado correctamente', 'error' => false, 'data' => $data);
 		}
 		else
 		{
 			$res = array('msg' => 'Error al intentar registra', 'error' => true, 'data' => array());
-		}
+		}*/
 
 	}
 	catch (Exception $e)
