@@ -6,7 +6,7 @@ Class ClsConexion
     private static $db_pass = '';//'+-*planeatec+-*';
 
     protected $db_driver = 'mysql';
-    protected $db_name   = 'bd_rastreo';//'planeate_jl';
+    protected $db_name   = 'db_angular';//'planeate_jl';
     protected $query     = '';
     protected $rows      = array();
     protected $conn      = null  ;
