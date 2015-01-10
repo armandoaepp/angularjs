@@ -17,15 +17,12 @@ app.service('personaService', function($http){
         return $http.get(url_, {'params': params_});
 
 	};
-	/*
-	this.getVehiculoByIdVehiculo = function(idvehiculo){
-        var url_    = 'data/ajax/vehiculo/getVehiculoByIdVehiculo.php';
-        var params_ = {'idvehiculo': idvehiculo} ;
-        return $http.get(url_, {'params': params_});
-	};
-	this.updVehiculo = function(vehiculo){
-        return $http.put('data/ajax/vehiculo/updVehiculo.php', vehiculo) ;
-	}*/
+	upd_persona($bean_persona)
+
+
+	this.updVehiculo = function(persona){
+        return $http.put('data/ajax/persona/updPesona.php', persona) ;
+	}
 
 
 });

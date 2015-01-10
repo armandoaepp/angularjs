@@ -1,7 +1,5 @@
 <?php
-header('content-type: application/json; charset=utf-8');
-
-
+	header('content-type: application/json; charset=utf-8');
 
 	try
 	{
@@ -21,9 +19,8 @@ header('content-type: application/json; charset=utf-8');
 		$bean_persona->setNombre($nombre);
 		$bean_persona->setNacimiento($nacimiento) ;
 		$bean_persona->setTipo($tipo) ;
-		$bean_persona->setEstado(1) ;
 
-		$data = $objPersona->set($bean_persona);
+		$data = $objPersona->upd_persona($bean_persona);
 
 		if (count($data) > 0)
 		{
@@ -33,7 +30,6 @@ header('content-type: application/json; charset=utf-8');
 		{
 			$res = array('msg' => 'Error al intentar registra', 'error' => true, 'data' => array());
 		}
-
 
 	}
 	catch (Exception $e)
