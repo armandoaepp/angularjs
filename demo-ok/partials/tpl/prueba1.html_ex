@@ -1,0 +1,47 @@
+<!--<article class="marco">
+    <div>
+        <header>
+            <span>95%</span>
+        </header>
+        <section>
+            <i class="icono-user"></i>
+            <h1 class="plan-title">Damián Saavedra</h1>
+            <h2 class="plan-sub-title">jose alberto</h2>
+            <ul class="plan-features">
+                <li>
+                    <i class="icono-envelope-o"></i>
+                    <p>jlds161089@gmail.com</p>
+                </li>
+                <li>
+                    <i class="icono-phone"></i>
+                    <p>992703459</p>
+                </li>
+                <li>
+                    <i class="icono-calendar"></i>
+                    <p>16 de Octubre de 1989</p>
+                </li>
+                <li>
+                    <i class="icono-graduation-cap"></i>
+                    <p>Ingeniería de Sistema</p>
+                </li>
+                <li>
+                    <i class="icono-university"></i>
+                    <p>Universidad Señor de Sipán</p>
+                </li>
+            </ul>        
+        </section>
+        <footer>
+            <nav>
+                <a href="" title="Editar">
+                    <i class="icono-pencil"></i>
+                </a>
+                <a href="" title="Eliminar">
+                    <i class="icono-trash-o"></i>
+                </a>
+                <a href="" title="Configurar">
+                    <i class="icono-gear"></i>
+                </a>
+            </nav>
+        </footer>
+    </div>
+</article>-->

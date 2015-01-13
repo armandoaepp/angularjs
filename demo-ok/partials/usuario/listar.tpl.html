@@ -1,0 +1,32 @@
+<form role="form" name="frm_usuario">
+	<table style="width:100%; margin:0 auto;" border="1">
+		<caption>LISTA DE USUARIOS</caption>
+		<thead>
+			<tr>
+				<th>Nombre</th>
+				<!--th>Usuario</th-->
+				<th>Teléfono</th>
+				<th>Correo</th>
+				<th>Acción</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="usuario in usuarios">
+				<td>{{usuario.nombre}}</td>
+				<!--td>{{usuario.usuario}}</td-->
+				<td>{{usuario.telefono}}</td>
+				<td>{{usuario.correo}}</td>
+				<td>
+					<a href="#/usuario/editar/{{usuario.idpersona}}">Editar usuario</a>
+				</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td colspan="4" style="text-align:center;">
+					<a href="#/usuario/nuevo">Nuevo usuario</a>
+				</td>
+			</tr>
+		</tfoot>
+	</table>
+</form>

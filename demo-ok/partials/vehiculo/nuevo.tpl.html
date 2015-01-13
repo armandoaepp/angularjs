@@ -1,0 +1,71 @@
+<form role="form" name="frm_vehiculo" ng-submit="setVehiculo()">
+	<table style="width:100%; margin:0 auto;">
+		<tr>
+			<td>Placa</td>
+			<td>
+				<input ng-model="placa" type="text" required>
+			</td>
+		</tr>
+		<!--<tr>
+			<td>Constancia Inscripcion</td>
+			<td>
+				<input type="text">
+			</td>
+		</tr>-->
+		<tr>
+			<td>Color Unidad</td>
+			<td>
+				<input ng-model="color" type="text">
+			</td>
+		</tr>
+		<tr>
+			<td>Modelo</td>
+			<td>
+				<input ng-model="modelo" type="text">
+			</td>
+		</tr>
+		<tr>
+			<td>Observaciones</td>
+			<td>
+				<input ng-model="observacion" type="text">
+			</td>
+		</tr>
+		<tr>
+			<td>Marca Unidad</td>
+			<td>
+				<input ng-model="marca" type="text">
+			</td>
+		</tr>
+		<!--<tr>
+			<td>Placa Carreta</td>
+			<td>
+				<input ng-model="placa" type="text">
+			</td>
+		</tr>-->
+		<tr>
+			<td>Consumo promedio x Gln</td>
+			<td>
+				<input ng-model="consumo" type="text">
+			</td>
+		</tr>
+		<tr>
+			<td>Tipo de Unidad</td>
+			<td>
+                <select ng-model="tipo" ng-options="tipo.nombre for tipo in tipovehiculo" required>
+                    <option value="">-- Seleccione --</option>
+                </select>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="text-align:center;">
+				<a href="#/vehiculo/listar">Listar vehiculos</a>
+				<button type="submit" ng-disabled="frm_vehiculo.$invalid">Registrar</button>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="text-align:center;">
+				<span>{{msjVehiculo}}</span>
+			</td>
+		</tr>
+	</table>
+</form>

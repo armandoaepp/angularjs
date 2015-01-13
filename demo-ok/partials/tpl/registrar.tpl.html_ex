@@ -1,0 +1,88 @@
+<form role="form" name="frm_registrar" ng-submit="setCliente(cliente)">
+    <fieldset>
+        <legend>Datos de la Empresa</legend>
+
+        <div class="fila-completa">
+            <div class="width-100p float-right">
+                <input type="text" class="width-100p" placeholder="Número de RUC" ng-model="cliente.empruc" required>
+            </div>
+        </div>
+
+        <div class="fila-completa">
+            <div class="width-100p float-right">
+                <input type="text" class="width-100p" placeholder="Razón Social" ng-model="cliente.emprazonsocial" required>
+            </div>
+        </div>
+
+        <div class="fila-completa">
+            <div class="width-100p float-right">
+                <input type="text" class="width-100p" placeholder="N° Teléfono" ng-model="cliente.emptelefono" required>
+            </div>
+        </div>
+
+        <div class="fila-completa">
+            <div class="width-100p float-right">
+                <input type="text" class="width-100p" placeholder="N° Fax" ng-model="cliente.empfax">
+            </div>
+        </div>
+
+        <div class="fila-completa">
+            <div class="width-100p float-right">
+                <input type="text" class="width-100p" placeholder="Dirección Fiscal / Facturación" ng-model="cliente.empdireccion" required>
+            </div>
+        </div>
+
+        <!--<div class="fila-completa">
+            <div class="width-80p float-left">
+                <input type="password" class="width-100p" placeholder="Logo de la Empresa (Scaneada)" ng-model="user.logo" required readonly>
+            </div>
+            <div class="fila-icono width-20p float-right btn-buscar">
+                <span class="icon-search"></span>
+            </div>
+        </div>-->
+
+    </fieldset>
+
+    <fieldset>
+        <legend>Datos del contacto</legend>
+
+        <div class="fila-completa">
+            <div class="width-100p float-right">
+                <input type="text" class="width-100p" placeholder="Nombres" ng-model="cliente.ctonombres" required>
+            </div>
+        </div>
+
+        <div class="fila-completa">
+            <div class="width-100p float-right">
+                <input type="text" class="width-100p" placeholder="Apellido Paterno" ng-model="cliente.ctoapepat" required>
+            </div>
+        </div>
+
+        <div class="fila-completa">
+            <div class="width-100p float-right">
+                <input type="text" class="width-100p" placeholder="Apellido Materno" ng-model="cliente.ctoapemat" required>
+            </div>
+        </div>
+
+        <div class="fila-completa">
+            <div class="width-100p float-right">
+                <input type="text" class="width-100p" placeholder="Teléfono Mobil" ng-model="cliente.ctomobil">
+            </div>
+        </div>
+
+        <div class="fila-completa">
+            <div class="width-100p float-right">
+                <input type="text" class="width-100p" placeholder="Correo Electrónico" ng-model="cliente.ctocorreo">
+            </div>
+        </div>
+
+        <p class="error">{{errorRegistrar}}</p>
+    </fieldset>
+
+    <nav>
+        <button class="btn btn-default" type="submit" ng-disabled="frm_registrar.$invalid">Registrar</button>
+        <button class="btn btn-default" type="button" ng-click="irlogin()">Regresar</button>
+        <img ng-if="isLoading" class="loading" src="img/espera.gif">
+    </nav>
+
+</form>

@@ -1,0 +1,356 @@
+*, *:before, *:after {
+	        box-sizing: border-box;
+	    -ms-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+fieldset{
+	border-top: 1px solid #ccc;
+	border-left: 0;
+	border-bottom: 0;
+	border-right: 0;
+	padding: 15px 5px 5px;
+	margin: 0;
+}
+
+legend{
+	text-align: left;
+	margin-left: 1.5rem;
+	font-weight: bold;
+}
+
+.error{
+	color: rgba(167, 43, 43, 0.88);
+}
+
+.correcto{
+	color: rgba(35, 118, 8, 0.88);
+}
+
+.fila-completa{
+	width: 100%;
+	height: 2.35rem;
+	/*line-height: 2.35rem;*/
+	clear: both;
+	position: relative;
+}
+
+.fila-icono{
+	background: none repeat scroll 0% 0% #F2F2F2;
+	border-color: #CCC;
+	text-align: center;
+	border-style: solid;
+	border-width: 1px 1px 1px 1px;
+	/*font-size: 0.77778rem;*/
+	height: 2.35rem;
+	line-height: 2.35rem;
+	width: 15%;
+	/*float: left;*/
+}
+
+.float-left{
+	float: left;
+}
+
+.width-15p{
+	width: 15%;
+}
+
+.width-20p{
+	width: 20%;
+}
+
+.width-50p{
+	width: 50%;
+}
+
+.width-80p{
+	width: 80%;
+}
+
+.width-85p{
+	width: 85%;
+}
+
+.width-100p{
+	width: 100%;
+}
+
+.float-right{
+	float: right;
+}
+
+input[type="text"], input[type="password"], select
+{
+	background-color: #FFF;
+	border: 1px solid #CCC;
+	box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1) inset;
+	color: rgba(0, 0, 0, 0.70);
+	display: block;
+	/*font-size: 0.875rem;*/
+	height: 2.35rem;
+	margin: 0px 0px 1rem;
+	/*margin:0;*/
+	padding: 0.5rem;
+	transition: box-shadow 0.45s ease 0s, border-color 0.45s ease-in-out 0s;
+	width: 100%;
+	/*font-size: 15px;*/
+	display: inline-block;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+select:focus
+{
+	box-shadow: 0px 0px 5px #999;
+	border-color: #999;
+
+	background: none repeat scroll 0% 0% #FAFAFA;
+	border-color: #999;
+	outline: medium none;
+}
+
+form{
+	margin: 0 auto ;
+	width: 100% ;
+}
+/*@media screen and (max-width: 900px) {
+	form{
+		width: 70% ;
+	}
+}
+@media screen and (max-width: 450px) {
+	form{
+		width: 100% ;
+	}
+}*/
+
+.loading{
+	position: absolute;
+	top: 6px;
+	right: 12px;
+	width: 25px;
+	height: 25px; 
+}
+
+/*nav{
+	padding: 5px;
+	width: 100%;
+	margin: 0;
+}*/
+
+.btn-buscar{
+	cursor: pointer;
+	background-color: rgb(158, 182, 210);
+	border-color: rgb(120, 144, 173);
+}
+.btn-buscar:hover{
+	background-color: rgb(120, 144, 173);
+}
+/*******************************************/
+.cabecera{
+	background-color: #333;
+	height: 50px;
+	left: 0;
+	line-height: 50px;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	box-shadow: 0px 2px 5px #888888;
+	z-index: 2;
+}
+.logo{
+	float: left;
+	margin-left: 10px;
+	position: absolute;
+	width: 190px;
+}
+
+.logo > img{
+	vertical-align: middle;
+}
+.navegacion{
+	float: right;
+	padding-left: 210px;
+	padding-right: 15px;
+	position: absolute;
+	width: 100%;
+}
+
+.f_left{
+	float: left;
+}
+.f_right{
+	float: right;
+}
+/***************************************************/
+.cuerpo{
+	position: fixed;
+	margin-top: 50px;
+	background-color: #f9ffde;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 1;
+}
+.repo-mapa{
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+.mapa{
+	height: 100%;
+	width: 100%;
+}
+.config{
+	/*background-color: #f9ffde;*/
+	background-image: url("../img/bg_menu.png");
+	bottom: 0;
+	height: 100%;
+	position: absolute;
+	right: 0px;
+	width: 250px;
+	-webkit-box-shadow: 0 0 10px rgba(0,0,0,.3);
+	-moz-box-shadow: 0 0 10px rgba(0,0,0,.3);
+	-ms-box-shadow: 0 0 10px rgba(0,0,0,.3);
+	-o-box-shadow: 0 0 10px rgba(0,0,0,.3);
+	box-shadow: 0 0 10px rgba(0,0,0,.3);
+
+	padding: 15px;
+}
+
+/*********************************************************/
+ul.menu-vertical{
+	list-style-type: none;
+	font-family: Arial;
+}
+ul.menu-vertical > li{
+	height: 35px;
+	width: 100%;
+	display: table;
+	cursor: pointer;
+}
+ul.menu-vertical > li:hover{
+	background-color: #333;
+}
+ul.menu-vertical > li:hover > a{
+	color: #DC543E;
+}
+ul.menu-vertical > li > a{
+	text-decoration: none;
+	font-size: 13px;
+	display: table-cell;
+	vertical-align: middle;
+	padding-left: 10px;
+	padding-right: 10px;
+	color: #524C4C;
+}
+ul.menu-vertical > li > a > span:first-child{
+	margin-right: 5px;
+}
+/********************************************************/
+.trabajo{
+	/*background-color: #f9ffde;*/
+	background-image: url("../img/bg_menu.png");
+	bottom: 0;
+	height: 100%;
+	position: absolute;
+	left: 0px;
+	width: 60%;
+	-webkit-box-shadow: 0 0 10px rgba(0,0,0,.3);
+	-moz-box-shadow: 0 0 10px rgba(0,0,0,.3);
+	-ms-box-shadow: 0 0 10px rgba(0,0,0,.3);
+	-o-box-shadow: 0 0 10px rgba(0,0,0,.3);
+	box-shadow: 0 0 10px rgba(0,0,0,.3);
+
+	padding: 15px;
+}
+/*lista cliente
+.marco{
+    padding: 8px;
+    width: 240px;
+    display: inline-block;
+}
+.marco > div{
+    background-color: #FFF;
+    border-radius: 5px;
+    border-left: 4px solid #007AFF;  border-right: 4px solid #007AFF;
+}
+.marco > div > header{
+    text-align: left;
+}
+.marco > div > header > span{
+    border-bottom-right-radius: 35px;
+    font-size: 14px;
+    padding: 10px 0 10px 10px;
+    text-align: left;
+    width: 55px;
+    display: inline-block;
+    background-color: #007AFF;  color: #FFFFFF;
+}
+.marco > div > section{
+    padding: 0 10px;
+}
+.marco > div > section > i{
+    display: block;
+    font-size: 35px;
+    text-align: center;
+    margin-top: -15px;
+    color: #007AFF;
+}
+.marco > div > section > h1{
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+}
+.marco > div > section > h2{
+    font-size: 13px;
+    text-transform: capitalize;
+    font-weight: normal;
+    text-align: center;
+}
+.marco > div > section > ul{
+    margin: 5px 0;
+    border-top: 1px solid #e5ded6;
+    border-bottom: 1px solid #e5ded6;
+    text-align: left;
+    padding: 5px 5px;
+}
+.marco > div > section > ul > li{
+    line-height: 22px;
+    font-size: 13px;
+}
+.marco > div > section > ul > li > i{
+    display: inline-block;
+}
+.marco > div > section > ul > li > p{
+    display: inline-block;
+    font-size: 12px;
+}
+.marco > div > footer{
+    text-align: center;
+    padding: 5px 5px 10px 5px;
+    font-size: 20px;
+}
+.marco > div > footer > nav > a{
+    background: #007AFF;
+    border-bottom: 2px solid;
+    border-color: rgba(0, 0, 0, 0.15);
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 2px 6px;
+    display: inline-block;
+    color: #000;
+}
+.marco > div > footer > nav > a:active{
+    border-bottom:0;
+    position: relative;
+    top: 2px;
+}*/

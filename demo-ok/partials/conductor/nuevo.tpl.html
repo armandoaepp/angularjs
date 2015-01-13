@@ -1,0 +1,77 @@
+<form role="form" name="frm_conductor" ng-submit="setConductor()" method="POST" enctype="multipart/form-data">
+	<table style="width:100%; margin:0 auto;">
+		<tr>
+			<td>Dni</td>
+			<td>
+				<input type="text" 
+					   required 
+					   maxlength="8" 
+					   ng-model="conductor.dni" />
+			</td>
+		</tr>
+		<tr>
+			<td>Anexar Dni Escaneado</td>
+			<td>
+				<input type="file" 
+					   required 
+					   file-upload 
+					   ng-model="imgdni" 
+					   accept="image/gif,image/jpeg" />
+			</td>
+		</tr>
+		<tr>
+			<td>Nombre</td>
+			<td>
+				<input ng-model="conductor.nombre" type="text" required>
+			</td>
+		</tr>
+		<tr>
+			<td>Apellido Paterno</td>
+			<td>
+				<input ng-model="conductor.apepat" type="text" required>
+			</td>
+		</tr>
+		<tr>
+			<td>Apellido Materno</td>
+			<td>
+				<input ng-model="conductor.apemat" type="text" required>
+			</td>
+		</tr>
+		<tr>
+			<td>Brevete</td>
+			<td>
+				<input ng-model="conductor.brevete" type="text" required>
+			</td>
+		</tr>
+		<tr>
+			<td>Anexar Brevete Escaneado</td>
+			<td>
+				<input type="file" 
+					   required 
+					   file-upload 
+					   ng-model="imgbrevete" 
+					   accept="image/gif,image/jpeg" />
+			</td>
+		</tr>
+		<tr>
+			<td>Teléfono Móvil</td>
+			<td>
+				<input type="text" 
+					   required 
+					   maxlength="9"
+					   ng-model="conductor.telefono"/>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="text-align:center;">
+				<a href="#/conductor/listar">Listar conductores</a>
+				<button type="submit" ng-disabled="frm_conductor.$invalid">Registrar</button>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="text-align:center;">
+				<span>{{msjConductor}}</span>
+			</td>
+		</tr>
+	</table>
+</form>

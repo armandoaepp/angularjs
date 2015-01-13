@@ -1,0 +1,30 @@
+<form role="form" name="frm_login" action="" method="">
+    <fieldset>
+        <legend>Login</legend>
+
+        <div class="fila-completa">
+            <div class="fila-icono width-15p float-left">
+                <span class="icon-user"></span>
+            </div>
+
+            <div class="width-85p float-right">
+                <input type="text" class="width-100p" placeholder="Ingrese su usuario"  ng-model="user.usuario" required>
+            </div>
+        </div>
+
+        <div class="fila-completa">
+            <div class="fila-icono width-15p float-left">
+                <span class="icon-key"></span>
+            </div>
+
+            <div class="width-85p float-right">
+                <input type="password" class="width-100p" placeholder="Ingrese su clave" ng-model="user.clave" required>
+            </div>
+        </div>
+
+        <p class="error">{{errorLogin}}</p>
+    </fieldset>
+
+    <button class="btn btn-default" type="button" ng-click="login(user)" ng-disabled="frm_login.$invalid">Ingresar</button>
+    <button class="btn btn-default" type="button" ng-click="irregistrar()">Registrarse</button>
+</form>

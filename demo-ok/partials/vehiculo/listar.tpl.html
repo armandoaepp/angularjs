@@ -1,0 +1,33 @@
+<form role="form" name="frm_vehiculo">
+	<table style="width:100%; margin:0 auto;" border="1">
+		<caption>LISTA DE VEHICULOS</caption>
+		<thead>
+			<tr>
+				<th>Placa</th>
+				<th>Tipo de Unidad</th>
+				<th>Marca</th>
+				<th>Modelo</th>
+				<th>Accion</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="vehiculo in vehiculos">
+				<td>{{vehiculo.placa}}</td>
+				<td>{{vehiculo.tipo}}</td>
+				<td>{{vehiculo.marca}}</td>
+				<td>{{vehiculo.modelo}}</td>
+				<td>
+					<a href="#/vehiculo/editar/{{vehiculo.idvehiculo}}">Editar vehiculo</a>
+					<!--button type="button" ng-click="getVehiculoByIdVehiculo(vehiculo.idvehiculo)">Editar</button-->
+				</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td colspan="5" style="text-align:center;">
+					<a href="#/vehiculo/nuevo">Nuevo vehiculo</a>
+				</td>
+			</tr>
+		</tfoot>
+	</table>
+</form>

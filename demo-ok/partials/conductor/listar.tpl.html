@@ -1,0 +1,32 @@
+<form role="form" name="frm_conductor">
+	<table style="width:100%; margin:0 auto;" border="1">
+		<caption>LISTA DE CONDUCTORES</caption>
+		<thead>
+			<tr>
+				<th>Nombre</th>
+				<th>DNI</th>
+				<th>Brevete</th>
+				<th>Télef. Móvil</th>
+				<th>Acción</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="conductor in conductores">
+				<td>{{conductor.nombre}}</td>
+				<td>{{conductor.dni}}</td>
+				<td>{{conductor.brevete}}</td>
+				<td>{{conductor.movil}}</td>
+				<td>
+					<a href="#/conductor/editar/{{conductor.idpersona}}">Editar conductor</a>
+				</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td colspan="5" style="text-align:center;">
+					<a href="#/conductor/nuevo">Nuevo conductor</a>
+				</td>
+			</tr>
+		</tfoot>
+	</table>
+</form>

@@ -1,0 +1,23 @@
+<div id="divRegistrar_prueba">
+	<form id="frm_prueba" name="frm_prueba" class="hform" method="post" ng-submit="updPrueba()" >
+		<fieldset> <legend> Nuevo Prueba</legend>
+
+				<input type="hidden" name="id" ng-model="prueba.id" />
+
+
+			<fieldset>
+				<label for="Nombres_">Nombres : </label>
+				<input type="text" name="Nombres" ng-model="prueba.Nombres"  />
+			</fieldset>
+			<fieldset>
+				<label for="Apellidos_">Apellidos : </label>
+				<input type="text" name="Apellidos" ng-model="prueba.Apellidos" value="{{Apellidos}}"/>
+			</fieldset>
+			<fieldset class="text-right">
+				<button  type="button" onclick="location.href='#/prueba/listar';" ="btnCancelar'" >Cancelar </button>
+
+				<button   id="btregistrar" ng-disabled="frm_prueba.$invalid" >Registrar </button>
+			</fieldset>
+		</fieldset>
+	</form>
+</div>

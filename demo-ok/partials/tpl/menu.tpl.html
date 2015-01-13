@@ -1,0 +1,6 @@
+<li class="yellow" ng-repeat="menu in menus">
+    <a href="#" class="{{menu.icono}}" title="{{menu.nombre}}"></a>
+    <ul ng-if="menu.hijos.length > 0" ng-include="'partials/tpl/sub-menu.tpl.html'">
+
+    </ul>
+</li>

@@ -1,0 +1,27 @@
+'use strict';
+
+app.service('helperService', ['$http', function($http){
+
+    this.uploadFileToUrl = function(files, url){
+
+    	var fd = new FormData();
+    	angular.forEach(files, function(file){
+    		fd.append('file', file);
+    	});
+    	
+    	$http.post(url, fd, {
+            transformRequest: angular.identity,
+            headers: {'Content-Type': undefined}
+        }).then(
+        	function(response){
+        		console.log(response);
+        	}
+        );
+
+    };
+
+    this.hi = function(){
+    	console.log('hola saludos');
+    };
+
+}]);

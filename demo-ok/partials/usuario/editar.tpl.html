@@ -1,0 +1,52 @@
+<form role="form" name="frm_usuario" ng-submit="updUsuario()">
+	<table style="width:100%; margin:0 auto;">
+		<tr>
+			<td>Dni</td>
+			<td>
+				<input ng-model="idpersona" type="hidden">
+				<input ng-model="usuario.dni" type="text" required>
+			</td>
+		</tr>
+		<tr>
+			<td>Nombre</td>
+			<td>
+				<input ng-model="usuario.nombre" type="text" required>
+			</td>
+		</tr>
+		<tr>
+			<td>Apellido Paterno</td>
+			<td>
+				<input ng-model="usuario.apepat" type="text" required>
+			</td>
+		</tr>
+		<tr>
+			<td>Apellido Materno</td>
+			<td>
+				<input ng-model="usuario.apemat" type="text" required>
+			</td>
+		</tr>
+		<tr>
+			<td>Correo</td>
+			<td>
+				<input ng-model="usuario.correo" type="text">
+			</td>
+		</tr>
+		<tr>
+			<td>Teléfono Móvil</td>
+			<td>
+				<input ng-model="usuario.telefono" type="text" required>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="text-align:center;">
+				<a href="#/usuario/listar">Listar usuarios</a>
+				<button type="submit" ng-disabled="frm_usuario.$invalid">Registrar</button>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="text-align:center;">
+				<span>{{msjUsuario}}</span>
+			</td>
+		</tr>
+	</table>
+</form>

@@ -1,0 +1,30 @@
+<form role="form" name="frm_prueba">
+	<table style="width:100%; margin:0 auto;" border="1">
+		<caption>LISTA DE PERSONAS</caption>
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>Apellidos</th>
+				<th>Nombres</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="prueba in pruebas">
+				<td>{{prueba.id}}</td>
+				<td>{{prueba.Nombres}}</td>
+				<td>{{prueba.Apellidos}}</td>
+				<td>
+					<a href="#/prueba/editar/{{prueba.id}}">Editar prueba</a>
+					<!--button type="button" ng-click="getpruebaByIdprueba(prueba.idprueba)">Editar</button-->
+				</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td colspan="5" style="text-align:center;">
+					<a href="#/prueba/nuevo">Nuevo prueba</a>
+				</td>
+			</tr>
+		</tfoot>
+	</table>
+</form>
