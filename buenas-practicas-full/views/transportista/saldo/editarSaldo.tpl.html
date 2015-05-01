@@ -1,0 +1,21 @@
+<!-- <form role="form" ng-submit="enviar(saldo_)"> -->
+<form role="form" ng-submit="enviar(saldo_)">
+    <div class="modal-header">
+        <h3 class="modal-title">Agregar Saldo </h3>
+    </div>
+    <div class="modal-body">
+          <input type="hidden" class="form-control" ng-model="saldo_.idcuenta" >
+      <div class="input-group">
+          <span class="input-group-addon">$</span>
+          <input type="text" class="form-control" ng-model="saldo_.nuevoSaldo" >
+          <span class="input-group-addon">.00</span>
+      </div>
+
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-primary" type="submit">Enviar</button>
+    <!-- <button class="btn btn-primary" ng-click="enviar()">Enviar</button> -->
+    <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+</div>
+
+</form>

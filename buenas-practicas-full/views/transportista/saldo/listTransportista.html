@@ -1,0 +1,73 @@
+<!-- <div class="row">
+	<ol class="breadcrumb">
+		<li>
+			<a >
+				<span class="glyphicon glyphicon-th"></span> Transportistas
+			</a> >
+			<a ui-sref="saldo">
+				<span class="glyphicon glyphicon-piggy-bank"></span> saldo
+			</a>
+		</li>
+	</ol>
+</div>
+-->
+<div class="col-lg-12 filtrado">
+	<div class="titulo">
+		<span>Lista de Transportistas</span>
+	</div>
+	<div class="busqueda">
+		<input type="text" class="form-control" placeholder="Búsqueda" ng-model="search">
+		<select class="form-control" ng-model="itemsPerPage">
+			<option selected value="5">Items: 5</option>
+			<option value="10">Items: 10</option>
+			<option value="15">Items: 15</option>
+		</select>
+	</div>
+</div>
+
+<table class="table">
+	<thead>
+		<tr>
+			<th style="width:12%">Ruc</th>
+			<th style="width:35%">Razon Social </th>
+			<th style="width:25%">Email</th>
+			<th style="width:18%">Saldo</th>
+			<th style="width:10%"></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="transportista in transportistas">
+			<!-- <tr ng-repeat="transportista in transportistas "> -->
+			<td style="width:12%">{{transportista.ruc}} </td>
+			<td style="width:35%">{{transportista.razonsocial}} </td>
+			<td style="width:25%">{{transportista.email}} </td>
+			<td style="width:18%"> S/ {{transportista.saldo}} </td>
+			<td style="width:10%">
+				<a href="#/transportista/saldo/{{transportista.idtransp}}" title="Agregar Saldo" >
+					<i class="glyphicon glyphicon-piggy-bank"></i>
+				</a>
+			</td>
+
+		</tr>
+
+	</tbody>
+
+</table>
+
+<div class="text-center" >
+	<div class="col-lg-12 paginado">
+		<pagination	total-items="totalItems"
+			max-size="maxSize"
+			ng-model="currentPage"
+			ng-change="pageChanged()"
+			items-per-page="itemsPerPage"
+			class="pagination-sm"
+			boundary-links="true"
+			first-text="<<"
+			previous-text="<"
+			next-text=">"
+			last-text=">>"
+			>
+		</pagination>
+	</div>
+</div>

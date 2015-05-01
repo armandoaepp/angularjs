@@ -1,0 +1,52 @@
+<div ui-view>
+	<div class="row">
+			<div class="col-xs-12 col-md-6 col-lg-3">
+				<div class="panel panel-blue panel-widget ">
+					<div class="row no-padding">
+						<div class="col-sm-3 col-lg-5 widget-left">
+							<em class="glyphicon glyphicon-th-list glyphicon-l"></em>
+						</div>
+						<div class="col-sm-9 col-lg-7 widget-right">
+							<div class="large">{{vm.tr_activos + vm.tr_inactivos}}</div>
+							<div class="text-muted">Total de Transportistas</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-xs-12 col-md-6 col-lg-3">
+				<div class="panel panel-teal panel-widget">
+					<div class="row no-padding">
+						<a ui-sref="activos">
+							<div class="col-sm-3 col-lg-5 widget-left">
+								<em class="glyphicon glyphicon-ok glyphicon-l"></em>
+							</div>
+						</a>
+						<div class="col-sm-9 col-lg-7 widget-right">
+							<div class="large">{{vm.tr_activos}}</div>
+							<div class="text-muted">Transportistas Activos</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-xs-12 col-md-6 col-lg-3">
+				<div class="panel panel-red panel-widget">
+					<div class="row no-padding">
+						<a ui-sref="inactivos">
+							<div class="col-sm-3 col-lg-5 widget-left">
+								<em class="glyphicon glyphicon-off glyphicon-l"></em>
+							</div>
+						</a>
+
+						<div class="col-sm-9 col-lg-7 widget-right">
+							<div class="large">{{vm.tr_inactivos}}</div>
+							<div class="text-muted">Transportistas Inactivos</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div><!--/.row-->
+</div>
+

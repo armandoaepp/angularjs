@@ -1,0 +1,168 @@
+<div class="text-right">
+	<a ng-click="backPage();">
+		<span class="glyphicon glyphicon-circle-arrow-left glyphicon-m"></span>
+	</a>
+</div>
+
+ <style>
+   .detalle .panel{
+    min-height:280px
+  }
+
+  .info span{
+    display: block;
+    font-size: 11px;
+
+  }
+  .info i{
+    padding: 6px 5px 6px 0px;
+    font-size: 16px;
+  }
+  .info span label{
+    font-family: "Open Sans", sans-serif;
+    font-weight: normal;
+    font-size: 12px;
+    margin: 0;
+  }
+</style>
+
+<div>
+  <div  class="detalle" ng-repeat="transportista in transportistaInfo">
+
+    <div class="col-sm-4 col-md-3">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">{{transportista.razonsocial}}<span class="anchorjs-icon"></span></h3>
+        </div>
+        <div class="panel-body">
+          <div class="img-transportista">
+            <img ng-src="{{transportista.avatar}}" alt="{{transportista.razonsocial}}">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Información -->
+    <div class="col-sm-4 col-md-3">
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <h3 class="panel-title" id="panel-title">Información</h3>
+          </div>
+          <div class="panel-body ">
+            <div class=" info">
+              <span>
+               <i class="glyphicon glyphicon-credit-card" title="Número de RUC"></i>
+               <label>{{transportista.ruc}}</label>
+             </span>
+             <span>
+              <i class="glyphicon glyphicon-user" title="Representante"></i>
+              {{transportista.representante}}
+            </span>
+
+            <span ng-if="transportista.direccion != '' " >
+              <i class="icon-geo1" title="direccion"></i>
+              {{transportista.direccion}}
+            </span>
+
+
+            <span ng-if="transportista.email != '' ">
+              <i class="glyphicon glyphicon-envelope" title="Email"></i>
+              <label>{{transportista.email}}</label>
+            </span>
+            <span ng-if="transportista.telefonos != '' " >
+              <i class="glyphicon glyphicon-phone-alt" title="Número de Telefonos"></i>
+              <label>{{transportista.telefonos}} </label>
+            </span>
+            <span ng-show="transportista.telefono2 != 'null' || transportista.telefono2 != '' " >
+              <i class="icon-mobile" title="Número de Celular"></i>
+              <label>{{transportista.telefono2}} </label>
+            </span>
+            <span ng-if="transportista.telefono3 = '' " >
+              <i class="icon-phone-hang-up" title="Otros Telefonos "></i>
+              <label>{{transportista.telefono3}} </label>
+            </span>
+            <span>
+              <i class="icon-calendar" title="Fecha de registro "></i>
+              <label>{{transportista.fechareg}} </label>
+            </span>
+
+            <span ng-if="transportista.coddistrito > 0 " >
+              <i class="icon-phone-hang-up" title="Otros Telefonos "></i>
+              <label>{{transportista.distrito}} </label>
+            </span>
+
+            <span ng-if="transportista.codprovincia > 0 " >
+              <i class="icon-phone-hang-up" title="Otros Telefonos "></i>
+              <label>{{transportista.provincia}} </label>
+            </span>
+
+            <span ng-if="transportista.coddepartamento > 0 " >
+              <i class="icon-phone-hang-up" title="Otros Telefonos "></i>
+              <label>{{transportista.departamento}} </label>
+            </span>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- redes sociales -->
+    <div class="col-sm-4 col-md-3"  >
+      <div class="panel panel-success"  style="  background: #F1F4F7;">
+        <div class="panel-heading">
+          <h3 class="panel-title" id="panel-title"> www / Rede Sociales </h3>
+        </div>
+        <div class="panel-body" >
+          <div class="caja-redes">
+
+            <a ng-href="{{transportista.web}}" target="_blank" title="{{transportista.web}}" class="icon-button linkedin">
+              <i class="fa fa-globe"></i>
+              <span></span>
+            </a>
+
+
+            <a ng-href="{{transportista.facebook}}" target="_blank" title="{{transportista.facebook}}" class="icon-button twitter">
+             <i class="fa fa-twitter"></i>
+             <span></span>
+           </a>
+
+           <a  ng-href="https://twitter.com/{{transportista.twitter}}" target="_blank" title="{{transportista.twitter}}" class="icon-button facebook">
+            <i class="fa fa-facebook-square"></i>
+            <span></span>
+          </a>
+        </div>
+      </div>
+    </div>
+    </div>
+
+
+    <div class="col-sm-4 col-md-3">
+      <div class="panel panel-warning">
+        <div class="panel-heading">
+          <h3 class="panel-title" id="panel-title">Panel title</h3>
+        </div>
+        <div class="panel-body">
+          Panel content
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 col-md-3">
+      <div class="panel panel-danger">
+        <div class="panel-heading">
+          <h3 class="panel-title" id="panel-title">Panel title</h3>
+        </div>
+        <div class="panel-body">
+          Panel content
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- <div class="text-right">
+  <a ng-click="backPage();">
+    <span class="glyphicon glyphicon-circle-arrow-left glyphicon-m"></span>
+  </a>
+</div>
+<div>
+ -->
